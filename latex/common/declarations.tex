@@ -1,0 +1,43 @@
+% Math conveniences
+\newcommand{\moe}{\text{\oe}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Page Numbering for long reports
+\makeatletter
+\newcommand\frontmatter{%
+    \cleardoublepage
+    %\@mainmatterfalse
+    \pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+    \cleardoublepage
+    % \@mainmattertrue
+    \pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+    \if@openright
+        \cleardoublepage
+    \else
+        \clearpage
+    \fi
+    % \@mainmatterfalse
+}
+\makeatother
+
+% Citations - be able to cite like "Reference 1"
+\DeclareCiteCommand{\refcite}
+{\usebibmacro{cite:init}%
+    \usebibmacro{prenote}%
+}
+{\usebibmacro{citeindex}%
+    \usebibmacro{cite:comp}}
+{}
+{\usebibmacro{cite:dump}%
+    \usebibmacro{postnote}}
+\newrobustcmd*{\Refcite}{\bibsentence\refcite}
+
+
+% Array configs
+\NiceMatrixOptions{cell-space-limits = 1pt}
+\UseTblrLibrary{amsmath}
+\UseTblrLibrary{booktabs}

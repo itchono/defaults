@@ -1,0 +1,30 @@
+\documentclass[aspectratio=169, dvipsnames, professionalfonts]{beamer}
+\usefonttheme[onlymath]{serif}
+
+\makeatletter
+  \def\beamer@calltheme#1#2#3{%
+    \def\beamer@themelist{#2}
+    \@for\beamer@themename:=\beamer@themelist\do
+    {%
+      \expandafter\usepackage\expandafter{themes/#1#3\beamer@themename}%
+    }
+  }
+\makeatother
+
+\usetheme{pureminimalistic}
+
+\input{common/imports}
+\input{common/declarations}
+\input{common/beamer_decls}
+
+
+\title{Title}
+\subtitle{Subtitle}
+\author[Mingde Yin]{Mingde Yin}
+\institute[UTIAS]{Institute for Aerospace Studies, University of Toronto}
+\date{2024-2026}
+
+\begin{document}
+
+\maketitle
+\end{document}

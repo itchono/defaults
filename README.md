@@ -1,2 +1,3 @@
-# defaults
-Default files for various purposes
+# Default Files
+
+Default/template files for various purposes.
